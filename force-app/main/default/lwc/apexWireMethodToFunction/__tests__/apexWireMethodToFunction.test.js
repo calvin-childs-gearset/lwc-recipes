@@ -36,7 +36,7 @@ describe('c-apex-wire-method-to-function', () => {
             return Promise.resolve().then(() => {
                 // Select elements for validation
                 const detailEls = element.shadowRoot.querySelectorAll('p');
-                expect(detailEls.length).toBe(mockGetContactList.length);
+                expect(detailEls.length).toBe(3);
                 expect(detailEls[0].textContent).toBe(
                     mockGetContactList[0].Name
                 );
@@ -56,7 +56,7 @@ describe('c-apex-wire-method-to-function', () => {
             // will automatically wait for the Promise chain to complete before
             // ending the test and fail the test if the promise rejects.
             return Promise.resolve().then(() => {
-                const errorPanelEl = element.shadowRoot.querySelector(
+                const errorPanelEl = element.shadowRoot.querySelgector(
                     'c-error-panel'
                 );
                 expect(errorPanelEl).not.toBeNull();
