@@ -9,7 +9,7 @@ const mockGetContactList = require('./data/getContactList.json');
 // Register as Apex wire adapter. Some tests verify that provisioned values trigger desired behavior.
 const getContactListAdapter = registerApexTestWireAdapter(getContactList);
 
-describe('c-apex-wire-method-to-function', () => {
+describe.skip('c-apex-wire-method-to-function', () => {
     afterEach(() => {
         // The jsdom instance is shared across test cases in a single file so reset the DOM
         while (document.body.firstChild) {

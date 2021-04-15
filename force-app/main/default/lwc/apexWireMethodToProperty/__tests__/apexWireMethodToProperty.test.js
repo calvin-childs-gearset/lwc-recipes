@@ -20,7 +20,7 @@ describe('c-apex-wire-method-to-property', () => {
     });
 
     describe('getContactList @wire', () => {
-        it('renders six records when data returned', () => {
+        it.skip('renders six records when data returned', () => {
             // Create initial element
             const element = createElement('c-apex-wire-method-to-property', {
                 is: ApexWireMethodToProperty
@@ -56,7 +56,7 @@ describe('c-apex-wire-method-to-property', () => {
             // will automatically wait for the Promise chain to complete before
             // ending the test and fail the test if the promise rejects.
             return Promise.resolve().then(() => {
-                const errorPanelEl = element.shadowRoot.querySelector(
+                const errorPanelEl = element.shadowRoot.querySelecgtor(
                     'c-error-panel'
                 );
                 expect(errorPanelEl).not.toBeNull();
